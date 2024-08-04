@@ -1,0 +1,675 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+/* CSS Variables */
+:root {
+    --brand-color: #00bfa6;
+    --linear-back: Linear-gradient(180deg,
+            rgba(34, 193, 195, 1) 0%,
+            rgba(0, 191, 92, 1) 100%);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+/* CSS in Body */
+body {
+    height: 100vh;
+    width: 100vw;
+    background: var(--linear-back);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.website_container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Sidebar */
+.website_container .sidebar_container {
+    width: 35%;
+    height: 100%;
+    background-color: white;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.sidebar_container .image {
+    height: 50%;
+    width: 100%;
+    position: relative;
+}
+
+.sidebar_container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.sidebar_container .image .right_image_box {
+    width: 70%;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    bottom: -3.5rem;
+    left: -3rem;
+    transform: rotate(16deg);
+}
+
+.sidebar_container .image .left_image_box {
+    width: 70%;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    bottom: -3.5rem;
+    right: -3rem;
+    transform: rotate(-16deg);
+}
+
+.sidebar_container .sidebar_content {
+    position: absolute;
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+    padding: 0.4rem;
+}
+
+.sidebar_container .sidebar_content h1 {
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.sidebar_container .sidebar_content p {
+    color: var(--brand-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.sidebar_container .sidebar_content .social_media {
+    margin-top: 1rem;
+}
+
+.sidebar_container .sidebar_content .social_media a {
+    font-size: 1.8rem;
+    margin: 0.4rem;
+    color: black;
+}
+
+.sidebar_container .sidebar_content .social_media a:hover {
+    color: var(--brand-color);
+    transition: 0.3s;
+}
+
+.sidebar_container .sidebar_buttom_menu {
+    position: absolute;
+    border-top: 0.2rem solid var(--brand-color);
+    width: 100%;
+    font-size: 1.6rem;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.sidebar_container .sidebar_buttom_menu:hover {
+    color: var(--brand-color);
+    transition: 0.3s;
+}
+
+/* Sidebar Navigation */
+.sidebar_container .sidebar_navigation {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    z-index: 2;
+    transition: left 0.3s;
+}
+
+.sidebar_container .sidebar_navigation li {
+    margin: 0.3rem 0;
+}
+
+.sidebar_container .sidebar_navigation li a:hover,
+.sidebar_container .sidebar_navigation .active {
+    color: var(--brand-color);
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Content */
+.website_container .content_container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+.content_container::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+.content_container::-webkit-scrollbar-thumb {
+    width: 0.2rem;
+    background-color: gray;
+    border-radius: 0.2rem;
+}
+
+/* About Page */
+
+.title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.title span {
+    color: var(--brand-color);
+}
+
+.line {
+    width: 4rem;
+    border-top: 0.35rem solid black;
+    border-radius: 0.5rem;
+}
+
+.about_page .about_content {
+    margin-top: 1.2rem;
+    padding: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.about_page .about_content p {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.about_profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem;
+}
+
+.about_profile .left_profile {
+    width: 46%;
+}
+
+.about_profile .left_profile li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.3rem 0;
+    font-size: 1rem;
+}
+
+.about_profile .right_profile {
+    width: 46%;
+}
+
+.about_profile .right_profile li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.3rem 0;
+    align-items: center;
+    font-size: 1rem;
+}
+
+li .profile_title {
+    padding: 0.4rem;
+    background-color: var(--brand-color);
+    color: white;
+    border-radius: 0.3rem;
+}
+
+/* Resume Page */
+.resume_page .resume_container {
+    margin: 1.2rem 0;
+    display: flex;
+}
+
+.left_resume {
+    width: 100%;
+    padding: 0.6rem;
+    border-right: 0.2rem solid var(--brand-color);
+}
+
+.right_resume {
+    width: 100%;
+    padding: 0.6rem;
+}
+
+.resume_title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.resume_title i {
+    color: var(--brand-color);
+}
+
+.resume_box {
+    margin: 1.5rem 0;
+}
+
+.resume_box .resume_date {
+    font-size: 1rem;
+    border: 0.1rem solid var(--brand-color);
+    padding: 0.1rem 0.2rem;
+    color: var(--brand-color);
+}
+
+.resume_box .resume_box_title {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.resume_box .resume_company {
+    font-size: 1rem;
+}
+
+.resume_box .resume_text {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Skills Container */
+
+.skill_box .skill_title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.skill_box {
+    margin: 1rem 0;
+}
+
+.skill_box .skill_line_container {
+    height: 0.8rem;
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 0.4rem;
+    overflow: hidden;
+}
+
+.skill_box .skill_line {
+    background-color: var(--brand-color);
+    height: 0.8rem;
+}
+
+/* Blogs Page */
+.blogs_page .blogs_container {
+    margin: 0.4rem;
+}
+
+.blog_box {
+    margin-top: 1.2rem;
+    border: 0.1rem solid var(--brand-color);
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.blog_box .blog_title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.blog_box .blog_text {
+    margin: 0.4rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.blog_box .blog_image {
+    width: 100%;
+    height: auto;
+}
+
+/* Services Page */
+
+.services_page .services_container {
+    margin: 1.2rem 0.4rem 0.4rem 0.4rem;
+    display: flex;
+}
+
+.services_page .services_container .services_box {
+    width: 50%;
+    margin: 0.6rem;
+    border: 0.1rem solid var(--brand-color);
+    border-radius: 0.4rem;
+    padding: 0.6rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.services_page .services_container .services_box:hover {
+    background-color: var(--brand-color);
+    transition: 0.3s;
+}
+
+.services_page .services_container .services_box:hover i,
+.services_page .services_container .services_box:hover .services_title {
+    color: white;
+    transition: 0.3s;
+}
+
+.services_box i {
+    color: var(--brand-color);
+    font-size: 1.5rem;
+    margin: 0.3rem 0;
+}
+
+.services_box .services_title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--brand-color);
+    margin: 0.4rem 0;
+}
+
+.services_box .services_text {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Contact Page */
+.contact_page .contact_container {
+    margin: 1.2rem 0.4rem;
+}
+
+.contact_container form .form_name_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_container form .form_name_row .left_form_row {
+    width: 47%;
+}
+
+.contact_container form .form_name_row .right_form_row {
+    width: 47%;
+}
+
+.contact_container form label {
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    margin-left: 0.2rem;
+}
+
+.contact_container form input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.3rem;
+    border: none;
+    outline: none;
+    background-color: lightgray;
+    border-radius: 0.4rem;
+}
+
+.contact_container form input:focus {
+    border: 0.2rem solid var(--brand-color);
+    transition: 0.3s;
+}
+
+.contact_container form textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.3rem;
+    border: none;
+    outline: none;
+    background-color: lightgray;
+    border-radius: 0.4rem;
+    height: 6rem;
+    resize: none;
+}
+
+.contact_container form #send_button {
+    background-color: var(--brand-color);
+    margin-top: 0.6rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact_container form #send_button:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+/* Global Menu CSS */
+#global_menu_button_container {
+    position: absolute;
+    left: -3rem;
+    display: none;
+    margin-top: 0.1rem;
+}
+
+#global_menu_button_container #global_menu_button {
+    background-color: white;
+    font-size: 2rem;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+#global_menu_button_container #global_menu_button:hover {
+    color: var(--brand-color);
+    transition: 0.3s;
+}
+
+#global_menu_button_container p {
+    color: var(--brand-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: none;
+}
+
+#global_menu_items {
+    position: fixed;
+    left: -120%;
+    /* left: 0; */
+    top: 0;
+    background-color: white;
+    width: 40%;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    transition: left 0.3s;
+}
+
+#global_menu_items div {
+    width: 80%;
+    margin-top: 4rem;
+}
+
+#global_menu_items li {
+    margin: 1rem 0;
+}
+
+#global_menu_items a {
+    display: block;
+    width: 100%;
+    padding: 0.4rem 0.2rem;
+    border-bottom: 0.1rem solid var(--brand-color);
+    font-size: 1.4rem;
+}
+
+#global_menu_items a:hover {
+    color: var(--brand-color);
+    transition: 0.3s;
+}
+
+#global_menu_items #global_menu_close_button {
+    position: absolute;
+    right: -3.3rem;
+    top: 0;
+    font-size: 2.6rem;
+    background-color: white;
+    padding: 0.6rem 0.8rem;
+    cursor: pointer;
+}
+
+#global_menu_items #global_menu_close_button:hover {
+    color: var(--brand-color);
+    transition: 0.3s;
+}
+
+/* Making Responsive */
+
+@media screen and (max-width: 1200px) {
+    .website_container {
+        width: 92%;
+        height: 92%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        height: auto;
+    }
+
+    .website_container {
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .website_container .sidebar_container {
+        width: 100%;
+        height: 80vh;
+        margin-bottom: 1rem;
+    }
+
+    .about_profile {
+        flex-direction: column;
+    }
+
+    .about_profile .left_profile {
+        width: 100%;
+    }
+
+    .about_profile .right_profile {
+        width: 100%;
+    }
+
+    #global_menu_button_container {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .website_container {
+        margin-top: 10vh;
+    }
+
+    .resume_page .resume_container {
+        flex-direction: column;
+    }
+
+    .left_resume {
+        border-right: none;
+        border-bottom: 0.2rem solid var(--brand-color);
+    }
+
+    .services_page .services_container {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .services_page .services_container .services_box {
+        width: 100%;
+        margin: 0.6rem 0;
+    }
+
+    .contact_container form .form_name_row {
+        flex-direction: column;
+    }
+
+    .contact_container form .form_name_row .left_form_row {
+        width: 100%;
+    }
+
+    .contact_container form .form_name_row .right_form_row {
+        width: 100%;
+    }
+
+    #global_menu_button_container {
+        position: fixed;
+        top: -0.1rem;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+        background-color: white;
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    #global_menu_button_container #global_menu_button {
+        color: black;
+        background-color: transparent;
+        padding: 0.2rem;
+        font-size: 1.6rem;
+    }
+
+    #global_menu_button_container p {
+        display: block;
+    }
+
+    #global_menu_items {
+        width: 100%;
+    }
+
+    #global_menu_items #global_menu_close_button {
+        left: 0;
+        text-align: center;
+        background-color: lightgray;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .website_container {
+        height: 100%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Mohsen - About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9f0f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            text-align: center;
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 12px;
+            /* تصغير حجم الأيقونات */
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #fff;
+            background-color: #007bff;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode header {
+            background-color: #1f1f1f;
+        }
+
+        .dark-mode nav ul li a {
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        .dark-mode nav ul li a.active,
+        .dark-mode nav ul li a:hover {
+            color: #333;
+            background-color: #007bff;
+        }
+
+        .about-section {
+            text-align: center;
+            padding: 80px 20px 20px;
+            /* تعديل الهوامش لتفادي التصاق النص بالرأس */
+        }
+
+        .profile-pic img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #007bff;
+        }
+
+        .dark-mode-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5em;
+            color: #333;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="project.html">Project</a></li>
+            </ul>
+            <button class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="profile-pic">
+                <img src="static/img/Mohamed Mohsen.jpg" alt="Profile Picture">
+            </div>
+            <h1>Mohamed Mohsen</h1>
+            <p>Computer Vision</p>
+            <p>Computer Vision at MTI</p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/mohamed2mohsen/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.kaggle.com/mohamedmohsen3330" target="_blank"><i class="fab fa-kaggle"></i></a>
+                <a href="https://www.facebook.com/share/xebQM2kiCiFf3dhn/?mibextid=qi2Omg"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://github.com/mohamed33301"><i class="fab fa-github"></i></a>
+                <a href="mailto:mohame3330@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const toggleButton = document.querySelector('.dark-mode-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleButton.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+    </script>
+</body>
+
+</html>

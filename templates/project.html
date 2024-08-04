@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Mohsen - Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d0e6ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #d0e6ff;
+        }
+
+        header {
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        header.dark-mode {
+            background-color: #444;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-icons a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-icons a.active,
+        .nav-icons a:hover {
+            color: #007bff;
+        }
+
+        .dark-mode .nav-icons a {
+            color: #d0e6ff;
+        }
+
+        .dark-mode .nav-icons a.active,
+        .dark-mode .nav-icons a:hover {
+            color: #007bff;
+        }
+
+        .projects-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .projects-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .project-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .project-item-content {
+            padding: 15px;
+        }
+
+        .project-item h2 {
+            margin: 0 0 10px;
+            font-size: 1.25em;
+            color: #007bff;
+        }
+
+        .project-item p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .dark-mode .project-item {
+            background-color: #444;
+            border-color: #555;
+        }
+
+        .dark-mode .project-item h2 {
+            color: #d0e6ff;
+        }
+
+        .dark-mode .project-item p {
+            color: #d0e6ff;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            color: #007bff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #0056b3;
+        }
+
+        .dark-mode .social-media a {
+            color: #d0e6ff;
+        }
+
+        .dark-mode .social-media a:hover {
+            color: #fff;
+        }
+
+        .dark-mode-toggle {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            right: 20px;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #0056b3;
+        }
+
+        .dark-mode-toggle i {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+        <nav>
+            <div class="nav-icons">
+                <a href="index.html" class="active"><i class="fas fa-home"></i></a>
+                <a href="about.html"><i class="fas fa-user"></i></a>
+                <a href="project.html"><i class="fas fa-project-diagram"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="projects-section">
+        <div class="container">
+            <h1>Projects from <i class="fab fa-github"></i></h1>
+            <div class="projects-list">
+                <a href="https://github.com/mohamed33301/Song-Popularity-Prediction-ML-" target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/Song Popularity.jpg" alt="Song Popularity Prediction ML">
+                        <div class="project-item-content">
+                            <h2>Song-Popularity-Prediction-ML</h2>
+                            <p>Regression & classification.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/mohamed33301/Digital_Signal_Processing_dsp_tasks" target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/DSP.jpg" alt="Digital Signal Processing dsp tasks">
+                        <div class="project-item-content">
+                            <h2>Digital_Signal_Processing_dsp_tasks</h2>
+                            <p>DSP.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/mohamed33301/Digital_Signal_Processing_Package" target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/DSP111.jpg" alt="Digital Signal Processing Package">
+                        <div class="project-item-content">
+                            <h2>Digital_Signal_Processing_Package</h2>
+                            <p>Digital Signal Processing Package.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/mohamed33301/ML_assignments" target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/ml_ass.jpg" alt="ML assignments">
+                        <div class="project-item-content">
+                            <h2>ML_assignments</h2>
+                            <p>Machine learning assignments with python.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/mohamed33301/Computational-Geometry-Package" target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/geo.jpg" alt="Computational Geometry Package">
+                        <div class="project-item-content">
+                            <h2>Computational-Geometry-Package</h2>
+                            <p>Computational-Geometry-Package.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/mohamed33301/Modeling-Simulation-2_MultiQueueSimulation" target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/modeling.jpg" alt="Modeling Simulation MultiQueueSimulation">
+                        <div class="project-item-content">
+                            <h2>Modeling-Simulation-2_MultiQueueSimulation</h2>
+                            <p>Modeling-Simulation-2_MultiQueueSimulation.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/mohamed33301/Weather-Station-Project-IOT" target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/weather.jpg" alt="Weather Station Project IOT">
+                        <div class="project-item-content">
+                            <h2>Weather-Station-Project-IOT</h2>
+                            <p>Weather-Station-Project-IOT.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/mohamed33301/Online-shoping-platform-cloud-computing-" target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/cloud.jpg" alt="Online shoping platform cloud computing">
+                        <div class="project-item-content">
+                            <h2>Online-shoping-platform-cloud-computing-</h2>
+                            <p>Online-shoping-platform-cloud-computing-.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/mohamed33301/ECG-based-Personal-info-Lock.-hci-" target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/hci.jpg" alt="ECG based Personal info Lock. hci">
+                        <div class="project-item-content">
+                            <h2>ECG-based-Personal-info-Lock.-hci-</h2>
+                            <p>ECG-based-Personal-info-Lock.-hci-.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/mohamed33301/Trivago-project_software-engineering" target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/swe.jpg" alt="Trivago project software engineering">
+                        <div class="project-item-content">
+                            <h2>Trivago-project_software-engineering</h2>
+                            <p>Trivago-project_software-engineering.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://www.kaggle.com/code/mohamedmohsen3330/data-analysis-students-performance"
+                    target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/data.jpg" alt="data analysis students performance">
+                        <div class="project-item-content">
+                            <h2>data-analysis-students-performance</h2>
+                            <p>data-analysis-students-performance.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://www.kaggle.com/code/mohamedmohsen3330/ml-hotel-regression" target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/hr.jpg" alt="ml-hotel-regression">
+                        <div class="project-item-content">
+                            <h2>ml-hotel-regression</h2>
+                            <p>ml-hotel-regression.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://www.kaggle.com/code/mohamedmohsen3330/ml-hotel-classification" target="_blank">
+                    <div class="project-item">
+                        <img src="static/img/hc.jpg" alt="ml hotel classification">
+                        <div class="project-item-content">
+                            <h2>ml-hotel-classification</h2>
+                            <p>ml-hotel-classification.</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Add more project items here as needed -->
+            </div>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/mohamed2mohsen/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.kaggle.com/mohamedmohsen3330" target="_blank"><i class="fab fa-kaggle"></i></a>
+                <a href="https://www.facebook.com/share/xebQM2kiCiFf3dhn/?mibextid=qi2Omg" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://github.com/mohamed33301" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:mohame3330@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.dark-mode-toggle').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('header').classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+
+</html>
